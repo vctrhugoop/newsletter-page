@@ -1,0 +1,17 @@
+//Vaviables
+$c-gradient-primary: #ff354d;
+$c-gradient-secundary: #fe6108;
+$c-text-primary: #1f1e1e;
+$c-text-secundary: #b8b8b8;
+
+//Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: 'Poppins', sans-serif;
+}
