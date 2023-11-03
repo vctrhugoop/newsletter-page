@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="./Styles/styles.css" />
   </head>
   <body>
-    <main class="container">
+    <div class="container">
+    <main class="main-content">
       <figure class="img">
         <img
           src="./Assets/img.svg"
@@ -21,7 +22,8 @@
         Person sitting reading a newspaper"
         />
       </figure>
-      <section class="content">
+      <section class="section-content">
+        <div class="text-wrapper">
         <h2>Get our weekly</h2>
         <h1>newsletter</h1>
         <p>
@@ -30,15 +32,17 @@
         </br>
           <strong>Subscribe now!</strong>
         </p>
+      </div>
       </section>    
       <form class="form-content">
-        <input id="mail" type="email" placeholder="Email Address">
-        <input id="subscribe-btn" type="submit" name="subscribe" value="SUBSCRIBE">
+        <input id="mail" type="email" placeholder="Email Address" required>
+        <input id="subscribe-btn" type="submit" name="subscribe" value="subscribe">
       </form>
     </main>
    <footer class="footer-content">
     <p>Your email is safe with us, we dont spam.</p>
    </footer>
+  </div>
     <script scr="./script.js"></script>
   </body>
 </html>
