@@ -13,7 +13,7 @@
   margin: 0 auto;
 
   .main-content {
-    max-width: 300px;
+    width: 300px;
 
     display: flex;
     flex-direction: column;
@@ -21,13 +21,23 @@
     justify-content: center;
     gap: 1.5rem;
 
-    > .section-content {
-      h2 {
+    .img img {
+      @media screen and (min-width: 768px) {
+        width: 400px;
+      }
+    }
+    .section-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .text-wrapper h2 {
         text-transform: uppercase;
         letter-spacing: 1.2px;
         font-size: 1rem;
       }
-      h1 {
+      .text-wrapper h1 {
+        margin-bottom: 1.5rem;
         text-transform: uppercase;
         letter-spacing: 2.4px;
         font-size: 2rem;
@@ -41,39 +51,53 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-    }
-    > .form-content {
-      width: 18.75rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      input {
-        border: none;
-      }
-      #mail {
-        width: 250px;
-        padding: 9px;
-        border-radius: 4px;
-        border: 0.5px solid #b7b7b7;
+      .form-content {
+        width: 18.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        &::placeholder {
-          color: config.$c-text-secundary;
+        input {
+          border: none;
+          outline: 0;
+        }
+        #mail {
+          width: 250px;
+          padding: 9px;
+          border-radius: 4px 0 0 4px;
+          border: 0.5px solid #b7b7b7;
+
+          transition: border 0.2s ease;
+
+          &::placeholder {
+            color: config.$c-text-secundary;
+          }
+
+          &:focus {
+            border: 0.5px solid config.$c-gradient-primary;
+          }
+        }
+        #subscribe-btn {
+          text-transform: uppercase;
+          margin-left: -3px;
+          padding: 10px;
+          border-radius: 0px 4px 4px 0;
+          background: linear-gradient(
+            274deg,
+            config.$c-gradient-primary -37.86%,
+            config.$c-gradient-secundary 125.4%
+          );
+          cursor: pointer;
+          color: #ffff;
+          font-weight: 700;
         }
       }
-      #subscribe-btn {
-        text-transform: uppercase;
-        margin-left: -3px;
-        padding: 10px;
-        border-radius: 0px 4px 4px 0;
-        background: linear-gradient(
-          274deg,
-          config.$c-gradient-primary -37.86%,
-          config.$c-gradient-secundary 125.4%
-        );
+    }
 
-        color: #ffff;
-        font-weight: 700;
-      }
+    @media screen and (min-width: 768px) {
+      width: 700px;
+      flex-direction: row;
+      gap: 2rem;
     }
   }
 
