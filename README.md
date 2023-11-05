@@ -1,5 +1,5 @@
 <h1 align="center">
-  Form Login Page
+  Newsletter Page
 </h1>
 
 <p align="center">
