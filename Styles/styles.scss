@@ -27,7 +27,7 @@
       }
     }
     .section-content {
-      display: none;
+      display: flex;
       flex-direction: column;
       gap: 1.5rem;
 
@@ -37,7 +37,6 @@
         font-size: 1rem;
       }
       .text-wrapper h1 {
-        margin-bottom: 1.5rem;
         text-transform: uppercase;
         letter-spacing: 2.4px;
         font-size: 2rem;
@@ -56,7 +55,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
         input {
           border: none;
           outline: 0;
@@ -92,6 +90,10 @@
           font-weight: 700;
         }
       }
+    }
+
+    .disable {
+      display: none;
     }
 
     @media screen and (min-width: 768px) {

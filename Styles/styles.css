@@ -36,7 +36,7 @@ input {
   }
 }
 .container .main-content .section-content {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
@@ -46,7 +46,6 @@ input {
   font-size: 1rem;
 }
 .container .main-content .section-content .text-wrapper h1 {
-  margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 2.4px;
   font-size: 2rem;
@@ -90,6 +89,9 @@ input {
   cursor: pointer;
   color: white;
   font-weight: 700;
+}
+.container .main-content .disable {
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .container .main-content {
