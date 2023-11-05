@@ -22,9 +22,6 @@
           Person sitting reading a newspaper"
           />
         </figure>
-        <section class="message-content disable">
-          <p>Trank you for your subscribed!</p>
-        </section>
         <section class="section-content">
           <div class="text-wrapper">
             <h2>Get our weekly</h2>
@@ -43,19 +40,21 @@
               placeholder="Email Address"
               required
             />
-            <input
-              id="subscribe-btn"
-              type="submit"
-              name="subscribe"
-              value="subscribe"
-            />
+            <button class="subscribe-btn" type="submit">Subcribe</button>
           </form>
+        </section>
+        <section class="message-content hide">
+          <h1>Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent. Please open it and click the
+            button inside to confirm your subscription.
+          </p>
         </section>
       </main>
       <footer class="footer-content">
         <p>Your email is safe with us, we dont spam.</p>
       </footer>
     </div>
-    <script scr="./script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

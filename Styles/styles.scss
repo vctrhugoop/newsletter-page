@@ -61,9 +61,11 @@
         }
         #mail {
           width: 250px;
-          padding: 9px;
+          height: 32px;
+          padding: 10px;
           border-radius: 4px 0 0 4px;
-          border: 0.5px solid #b7b7b7;
+          border: 1px solid #b7b7b7;
+          border-right: 0;
 
           transition: border 0.2s ease;
 
@@ -75,10 +77,11 @@
             border: 0.5px solid config.$c-gradient-primary;
           }
         }
-        #subscribe-btn {
+        .subscribe-btn {
           text-transform: uppercase;
-          margin-left: -3px;
+          height: 32px;
           padding: 10px;
+          border: none;
           border-radius: 0px 4px 4px 0;
           background: linear-gradient(
             274deg,
@@ -92,12 +95,33 @@
       }
     }
 
-    .disable {
+    .message-content {
+      text-align: center;
+
+      h1 {
+        background: linear-gradient(
+          274deg,
+          config.$c-gradient-primary -37.86%,
+          config.$c-gradient-secundary 125.4%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 768px) {
+          width: 300px;
+        }
+      }
+    }
+
+    .hide {
       display: none;
     }
 
     @media screen and (min-width: 768px) {
-      width: 700px;
+      min-width: 700px;
       flex-direction: row;
       gap: 2rem;
     }

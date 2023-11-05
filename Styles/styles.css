@@ -66,9 +66,11 @@ input {
 }
 .container .main-content .section-content .form-content #mail {
   width: 250px;
-  padding: 9px;
+  height: 32px;
+  padding: 10px;
   border-radius: 4px 0 0 4px;
-  border: 0.5px solid #b7b7b7;
+  border: 1px solid #b7b7b7;
+  border-right: 0;
   transition: border 0.2s ease;
 }
 .container .main-content .section-content .form-content #mail::-moz-placeholder {
@@ -80,22 +82,38 @@ input {
 .container .main-content .section-content .form-content #mail:focus {
   border: 0.5px solid #ff354d;
 }
-.container .main-content .section-content .form-content #subscribe-btn {
+.container .main-content .section-content .form-content .subscribe-btn {
   text-transform: uppercase;
-  margin-left: -3px;
+  height: 32px;
   padding: 10px;
+  border: none;
   border-radius: 0px 4px 4px 0;
   background: linear-gradient(274deg, #ff354d -37.86%, #fe6108 125.4%);
   cursor: pointer;
   color: white;
   font-weight: 700;
 }
-.container .main-content .disable {
+.container .main-content .message-content {
+  text-align: center;
+}
+.container .main-content .message-content h1 {
+  background: linear-gradient(274deg, #ff354d -37.86%, #fe6108 125.4%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .container .main-content .message-content h1 {
+    width: 300px;
+  }
+}
+.container .main-content .hide {
   display: none;
 }
 @media screen and (min-width: 768px) {
   .container .main-content {
-    width: 700px;
+    min-width: 700px;
     flex-direction: row;
     gap: 2rem;
   }
